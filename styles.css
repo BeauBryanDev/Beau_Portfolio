@@ -1,0 +1,134 @@
+/* Variables y base */
+:root {
+  --verde-claro: #74e086;
+  --verde-medio: #0b9121;
+  --verde-oscuro: #166e34;
+  --blanco: #ffffff;
+  --gris: #f0f0f0;
+  --negro: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: var(--gris);
+  color: var(--negro);
+}
+
+/* Header y navegación */
+header {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.perfil img {
+  width: 120px;
+  height: 120px;
+  border-radius: 25px;
+  object-fit: cover;
+  border: 2px solid var(--negro);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 0;
+}
+
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main content */
+main {
+  padding: 2em;
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+
+}
+
+.proyectos-grid a {
+  text-decoration: none;
+}
+
+.proyecto {
+  background-color: var(--verde-claro);
+  padding: 1em;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  
+}
+.proyecto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+input, textarea {
+  padding: 0.8em;
+  border: 1px solid var(--verde-medio);
+  border-radius: 5px;
+}
+
+button {
+  background-color: var(--verde-medio);
+  color: var(--blanco);
+  padding: 0.8em;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+
+}
+
+button:hover {
+  background-color: var(--verde-oscuro);
+}
+
+/* Footer */
+footer {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1em;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio de Beau</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="perfil">
+      <img src="./assets/bryanPicture.jpg" alt="Foto de Bryan David Castano" />
+      <h1>Bryan David Castano - Desarrollador Web</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacta me</a></li>
+        <li><a href="https://github.com/BeauBryanDev/" target="_blank">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobre-mi">
+      <h2>Sobre Mí</h2>
+      <p>
+        ¡Hola! Soy Beau. Apasionado del desarrollo web, la ciberseguridad y el hacking ético. Me encanta construir soluciones funcionales y seguras para la web.
+      </p>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <div class="proyectos-grid">
+        <a href="https://github.com/BeauBryanDev/beastGame" target="_blank"><div class="proyecto">Proyecto 1</div></a>
+        <a href="https://github.com/BeauBryanDev/myMovieApp" target="_blank"><div class="proyecto">Proyecto 2</div></a>
+        <a href="https://github.com/BeauBryanDev/rabbitGame" target="_blank"><div class="proyecto">Proyecto 3</div></a>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form id="form-contacto">
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="email" placeholder="Tu correo" required />
+        <textarea placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Beau. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
