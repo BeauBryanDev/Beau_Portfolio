@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio de Beau</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- AOS Animate On Scroll CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<style>
+  :root {
+  --verde-claro: #a8e6cf;
+  --verde-medio: #56c596;
+  --verde-oscuro: #379683;
+  --blanco: #ffffff;
+  --gris: #f0f0f0;
+  --negro: #333;
+
+  --bg-light: var(--gris);
+  --text-light: var(--negro);
+
+  --bg-dark: #121212;
+  --text-dark: #e0e0e0;
+  --verde-dark: #1f4037;
+}
+
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Header */
+header {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.perfil img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--blanco);
+}
+
+/* Botón modo oscuro */
+#toggle-mode {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: var(--verde-medio);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#toggle-mode:hover {
+  background-color: var(--verde-oscuro);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 0;
+}
+
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main */
+main {
+  padding: 2em;
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+}
+
+.proyecto {
+  background-color: var(--verde-claro);
+  padding: 1em;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark .proyecto {
+  background-color: var(--verde-dark);
+  color: var(--text-dark);
+}
+
+.proyecto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+input, textarea {
+  padding: 0.8em;
+  border: 1px solid var(--verde-medio);
+  border-radius: 5px;
+}
+
+button {
+  background-color: var(--verde-medio);
+  color: var(--blanco);
+  padding: 0.8em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--verde-oscuro);
+}
+
+/* Footer */
+footer {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1em;
+}
+    
+</style>
+</head>
+<body class="light">
+  <header>
+    <div class="perfil">
+      <img src="./assest/profile_pics/beau.jpg" alt="Foto de Beau" />
+      <h1>Beau - Desarrollador Web</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="https://github.com/BeauBoy" target="_blank">GitHub</a></li>
+      </ul>
+    </nav>
+
+    <!-- Toggle de Modo Oscuro -->
+    <button id="toggle-mode">🌙 Modo Oscuro</button>
+  </header>
+
+  <main>
+    <section id="sobre-mi" data-aos="fade-up">
+      <h2>Sobre Mí</h2>
+      <p>
+        ¡Hola! Soy Beau. Apasionado del desarrollo web, la ciberseguridad y el hacking ético. Me encanta construir soluciones funcionales y seguras para la web.
+      </p>
+    </section>
+
+    <section id="proyectos" data-aos="fade-up">
+      <h2>Proyectos</h2>
+      <div class="proyectos-grid">
+        <div class="proyecto">Proyecto 1</div>
+        <div class="proyecto">Proyecto 2</div>
+        <div class="proyecto">Proyecto 3</div>
+      </div>
+    </section>
+
+    <section id="contacto" data-aos="fade-up">
+      <h2>Contacto</h2>
+      <form id="form-contacto">
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="email" placeholder="Tu correo" required />
+        <textarea placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Beau. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('form-contacto');
+  const toggle = document.getElementById('toggle-mode');
+  const body = document.body;
+
+  // Modo Oscuro
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark');
+    body.classList.toggle('light');
+
+    toggle.textContent = body.classList.contains('dark') ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
+  });
+
+  // Envío de formulario
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('¡Gracias por contactarme! Te responderé pronto.');
+    form.reset();
+  });
+});
+  </script>
+</body>
+</html>
+
+
+
