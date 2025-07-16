@@ -132,3 +132,135 @@ footer {
   text-align: center;
   padding: 1em;
 }
+
+.skill-list {
+
+  display: grid;
+  grid-template-columns:  repeat( auto-fit , minmax( 120px, 1fr));
+
+}
+
+.skill-list li {
+
+  background: #2e6d36;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #08be1d;
+  transition:  
+      transform 0.5s cubic-bezier(0.6, -0.75, 0.27 , 1.75),
+      box-shadow 0.5s ease,
+      background-color 0.5s ease
+      ;
+  will-change: transform;
+  transform-style:  preserve-3d;
+  animation: bonceIn 1.25s cubic-bezier(0.6, -0.75, 0.27 , 1.75) forwards;
+
+}
+
+.skill-list:nth-child(1){ animation-delay: 0.25s;}
+.skill-list:nth-child(2){ animation-delay: 0.5s;}
+.skill-list:nth-child(3){ animation-delay: 0.75s;}
+.skill-list:nth-child(4){ animation-delay: 1s;}
+.skill-list:nth-child(5){ animation-delay: 1.25s;}
+.skill-list:nth-child(6){ animation-delay: 1.5s;}
+.skill-list:nth-child(7){ animation-delay: 1.5s;}
+.skill-list:nth-child(8){ animation-delay: 1.75s;}
+
+.skill-list li:hover {
+
+  background: #0c7c28;
+  box-shadow:  
+      0 0 25px green
+      0 10px 15px rega( 12, 245, 56, 0.75)    
+  ;
+  transform:  
+      translateY(-20px)
+      rotateX(15deg)
+  ;
+
+}
+
+.skill-list img {
+
+  display: inline-block;
+  width: 50px;
+  height: 35px;
+  animation:  wiggle 2.5s ease-in-out infinite;
+  transition: transform 0.5s ease;
+  will-change: transform;
+
+}
+
+.skill-list:hover img {
+
+  animation: paused;
+  filter: drop-shadow(0 2px #196316);
+
+}
+
+
+@keyframes bonceIn {
+
+  0% {
+      transform: scale(0.4);
+      opacity: 0.25;
+  }
+
+  50% {
+      transform: scale(1.15);
+      opacity: 1;
+  }
+
+  75% {
+      transform: scale(1.25);
+      opacity: 1;
+  }
+  
+  100% {
+
+      transform: scale(1);
+      opacity: 1;
+  }
+
+}
+
+@keyframes wiggle {
+
+  0% , 100% { transform: rotate(0deg);}
+  25% { transform: rotate(5deg);}
+  50% { transform: rotate(10deg);}
+  75% { transform: rotate(5deg);}
+}
+
+
+.social-networks {
+  margin-top: 20px;
+}
+
+
+.social-networks a {
+  margin: 0 12px;
+  color: #1e5329;
+  font-size: 1.8rem;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(0 0 4px #11b835bb);
+  will-change: transform, color;
+}
+
+
+.social-networks a img {
+width: 25px;
+height: 25px;
+transition: transform 0.3s ease, filter 0.3s ease;
+filter: drop-shadow(0 0 4px #159c2bbb);
+will-change: transform, filter;
+}
+
+
+.social-networks a:hover {
+  transform: scale(1.5) rotate(-10deg);
+  color: #0c472a;
+  filter: drop-shadow(0 0 14px #0e5a18cc);
+}
